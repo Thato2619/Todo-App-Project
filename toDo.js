@@ -7,6 +7,7 @@ const input = document.querySelector("[data-input]");
 class todoApp {
     todoItems = [];
     constructor(){} 
+    
 }
 
 //in new class, add constructor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
@@ -18,8 +19,10 @@ class toDo{
 }
 
 //add event-Listener in the form 
+//add variable that is id that contains math.random()
 form.addEventListener("submit" , (e) => {
-    e.preventDefault(' ');
+    e.preventDefault();
+    let id = Math.random() * 10000;
 
 })
 
