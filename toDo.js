@@ -23,6 +23,19 @@ class toDo{
 form.addEventListener("submit" , (e) => {
     e.preventDefault();
     let id = Math.random() * 10000;
-
 })
 
+//display the todo app in the DOM (use static method)
+class display{
+    static displayData(){
+        let displayData = todoApp.map((todoItems) => {
+            return `   
+            <div class="todo">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet hic corrupti corporis unde eum itaque odio numquam aspernatur error maxime nihil nobis beatae dignissimos quisquam, officia excepturi. Iste, itaque dignissimos!</p>
+            <button>Edit</button>
+            <button>Delete</button>
+            </div>
+            `
+        })
+    }
+}
