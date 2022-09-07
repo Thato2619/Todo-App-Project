@@ -34,7 +34,7 @@ class display{
             <div class="todo">
             <p>${item.todo}</p>
             <button>Edit</button>
-            <button>Delete</button>
+            <button class="remove" data-id = ${item.id}>Delete</button>
             </div>
             `
         })
@@ -43,6 +43,18 @@ class display{
     //Create object that clears out input add by user
     static clearInput(){
         input.value = "";
+    }
+
+    //add static object that removes todo
+    static removeTodo(){
+        lists.addEventListener("click", (e) => {
+            if(e.target.classlist.contains("remove")){
+                e.target.parentElement.remove();
+            }
+            let buttonId = e.target.dataset.id;
+            //remove from array.
+            display.removeArrayTodo(buttonId);
+        });
     }
 }
 
