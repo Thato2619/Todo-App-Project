@@ -37,5 +37,6 @@ class display{
             </div>
             `
         })
+        list.innerHTML= displayData.join(" ");
     }
 }
