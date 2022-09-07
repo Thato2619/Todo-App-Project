@@ -10,6 +10,7 @@ class todoApp {
     
 }
 
+
 //in new class, add constructor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 class toDo{
     constructor(id, todo){
@@ -31,7 +32,7 @@ class display{
         let displayData = todoApp.map((todoItems) => {
             return `   
             <div class="todo">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet hic corrupti corporis unde eum itaque odio numquam aspernatur error maxime nihil nobis beatae dignissimos quisquam, officia excepturi. Iste, itaque dignissimos!</p>
+            <p>${item.todo}</p>
             <button>Edit</button>
             <button>Delete</button>
             </div>
@@ -39,4 +40,10 @@ class display{
         })
         list.innerHTML= displayData.join(" ");
     }
+    //Create object that clears out input add by user
+    static clearInput(){
+        input.value = "";
+    }
 }
+
+
