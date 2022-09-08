@@ -79,5 +79,11 @@ class storage{
         let storage = localStorage.setItem("todo" , JSON.stringify(todoItems))
         return storage;
     }
+    //get storage from todoItems
+    static getStorage(){
+        let storage = localStorage.getItem("todo") === null ? []: 
+        JSON.parse(localStorage.getItem());
+        return storage;
+    } 
 }
 
