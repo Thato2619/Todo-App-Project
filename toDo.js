@@ -1,7 +1,7 @@
 //Get all elements from HTML file and add querySelector
-const form = document.querySelector("[data-form]");
-const list = document.querySelector("[data-list]");
-const input = document.querySelector("[data-input]");
+const input = document.querySelector('.dataInput');
+const button = document.querySelector('.dataButton');
+const list = document.querySelector('.dataList');
 
 //Create an empty object that contains empty array and constructor
 //class todoApp {
@@ -57,7 +57,7 @@ class toDo{
 //display the todo app in the DOM (use static method)
 class display{
     static displayData(){
-        let displayData = todoItems.map((item) => {
+        let displayData = todoItems.map(( item) => {
             return `   
                 <div class="todo">
                 <p>${item.todo}</p>
