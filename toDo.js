@@ -87,5 +87,12 @@ class display{
     //create object that removes array 
     static removeArrayTodo(id){
         todoItems = todoItems.filter((item) => item.id !==+id)
+        
     }
 }
+//once the brower is loaded
+window.addEventListener("DOMContentLoaded" , () =>{
+    display.displayData();
+    //remove from the DOM
+    display.removeTodo();
+});
