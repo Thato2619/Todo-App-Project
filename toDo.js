@@ -31,4 +31,6 @@ function addTodo(event){
     completeButton.innerHTML = '<i class="fas fa-trash"></i>'; 
     completeButton.classList.add("complete-btn");
     todoDiv.appendChild(deleteButton);
+    //Append to list
+    todoList.appendChild(todoDiv);
 }
