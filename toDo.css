@@ -66,10 +66,14 @@ form button:hover{
     margin: 0.5rem;
     background: white;
     color: black;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
+/*Style the todo list*/
+.todo li{
+    flex:1; 
+}
+
 
