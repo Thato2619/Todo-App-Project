@@ -26,3 +26,24 @@ header,form{
     justify-content: center;
     align-items: center;
 }
+
+/*design the input of the user. */
+form input, form button{
+    padding: 0.5rem;
+    font-size: 1.7rem;
+    border: none;
+    background-color: white
+}
+
+/*Design the button */
+form button{
+    color: #B597f6;
+    background: white;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+/*Design the button by adding hover effect*/
+form button:hover{
+    background: #B597f6;
+    color: white;
+}
