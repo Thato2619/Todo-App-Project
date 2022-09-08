@@ -1,7 +1,7 @@
 //Get all elements from HTML file and add querySelector
-const input = document.querySelector(".dataInput");
-const button = document.querySelector(".dataButton");
-const list = document.querySelector(".dataList");
+const input = document.querySelector(".todoInput");
+const button = document.querySelector(".todoButton");
+const list = document.querySelector(".todoList");
 
 //Add event listners
 button.addEventListener("click" , addTodo);
@@ -21,7 +21,7 @@ function addTodo(event){
     //add complete button within the LI
     const completeButton = document.createElement('button');
     completeButton.innerHTML = '<i class="fas fa-check"></i>'
-    completeButton.classList.add("complete-btn");
+    completeButton.classList.add("dataButton");
     todoDiv.appendChild(completeButton);
     //add delete button within the LI
     const deleteButton = document.createElement('button');
