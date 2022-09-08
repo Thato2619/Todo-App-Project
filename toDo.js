@@ -10,6 +10,22 @@ const input = document.querySelector("[data-input]");
     
 //}
 
+//add storage for todoItems 
+class storage{
+    static addStorage(todoItems){
+        let storage = localStorage.setItem("todo" , JSON.stringify(todoItems))
+        return storage;
+    }
+    //get storage from todoItems
+    static getStorage(){
+        let storage = localStorage.getItem("todo") === null ? []: 
+        JSON.parse(localStorage.getItem());
+        return storage;
+    } 
+}
+
+
+
 //empty array
 let todoItems = storage.getStorage();
 
@@ -73,17 +89,3 @@ class display{
         todoItems = todoItems.filter((item) => item.id !==+id)
     }
 }
-//add storage for todoItems 
-class storage{
-    static addStorage(todoItems){
-        let storage = localStorage.setItem("todo" , JSON.stringify(todoItems))
-        return storage;
-    }
-    //get storage from todoItems
-    static getStorage(){
-        let storage = localStorage.getItem("todo") === null ? []: 
-        JSON.parse(localStorage.getItem());
-        return storage;
-    } 
-}
-
