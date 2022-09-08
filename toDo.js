@@ -25,6 +25,8 @@ form.addEventListener("submit" , (e) => {
     display.clearInput();
     //remove from the dom
     display.removeTodo();
+    //add storage
+    storage.addStorage(todoItems);
 });
 
 
