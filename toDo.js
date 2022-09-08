@@ -21,12 +21,12 @@ function addTodo(event){
     //add complete button within the LI
     const completeButton = document.createElement('button');
     completeButton.innerHTML = '<i class="fas fa-check"></i>'
-    completeButton.classList.add("dataButton");
+    completeButton.classList.add("complete-btn");
     todoDiv.appendChild(completeButton);
     //add delete button within the LI
     const deleteButton = document.createElement('button');
     completeButton.innerHTML = '<i class="fas fa-trash"></i>'
-    completeButton.classList.add("complete-btn");
+    completeButton.classList.add("trash-btn");
     todoDiv.appendChild(deleteButton);
     //append to list
     list.appendChild(todoDiv);

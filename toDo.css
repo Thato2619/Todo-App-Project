@@ -75,5 +75,11 @@ form button:hover{
 .todo li{
     flex:1; 
 }
-
-
+/*Style delete button*/
+.trash.btn,.complete.btn{
+    background: #B597f6;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
