@@ -47,3 +47,11 @@ form button:hover{
     background: #B597f6;
     color: white;
 }
+
+/*Design list button and place them in the center*/
+.todoContainer{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
