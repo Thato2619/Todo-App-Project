@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway' , 'Sans-serif';
 }
 
 body{
     background-image: linear-gradient(120deg,  #96c6ea , #b597f6  );
-    color:white;
+    color:white; 
 }
