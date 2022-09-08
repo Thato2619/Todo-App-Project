@@ -4,11 +4,28 @@ const list = document.querySelector("[data-list]");
 const input = document.querySelector("[data-input]");
 
 //Create an empty object that contains empty array and constructor
-class todoApp {
-    todoItems = [];
-    constructor(){} 
+//class todoApp {
+   //let todoItems = [];
+    //constructor(){} 
     
-}
+//}
+
+//empty array
+let todoItems = [];
+
+
+//add event-Listener in the form 
+//add variable that is id that contains math.random()
+form.addEventListener("submit" , (e) => {
+    e.preventDefault();
+    let id = Math.random() * 1000000;
+    const todo = Todo(id, input.value);
+    todoItems = [...todoItems, todo ];
+    display.displayData();
+    display.clearInput();
+    //remove from the dom
+    display.removeTodo();
+});
 
 
 //in new class, add constructor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
@@ -19,26 +36,19 @@ class toDo{
     }
 }
 
-//add event-Listener in the form 
-//add variable that is id that contains math.random()
-form.addEventListener("submit" , (e) => {
-    e.preventDefault();
-    let id = Math.random() * 10000;
-})
-
 //display the todo app in the DOM (use static method)
 class display{
     static displayData(){
-        let displayData = todoApp.map((todoItems) => {
+        let displayData = todoItems.map((item) => {
             return `   
-            <div class="todo">
-            <p>${item.todo}</p>
-            <button>Edit</button>
-            <button class="remove" data-id = ${item.id}>Delete</button>
-            </div>
+                <div class="todo">
+                <p>${item.todo}</p>
+                <button>Edit</button>
+                <button class="remove" data-id = ${item.id}>Delete</button>
+                </div>
             `
-        })
-        list.innerHTML= displayData.join(" ");
+        })  
+        list.innerHTML= (displayData).join(" ");
     }
     //Create object that clears out input add by user
     static clearInput(){
@@ -47,14 +57,18 @@ class display{
 
     //add static object that removes todo
     static removeTodo(){
-        lists.addEventListener("click", (e) => {
-            if(e.target.classlist.contains("remove")){
+        list.addEventListener("click", (e) => {
+            if(e.target.classList.contains("remove")){
                 e.target.parentElement.remove();
             }
             let buttonId = e.target.dataset.id;
             //remove from array.
             display.removeArrayTodo(buttonId);
         });
+    }
+
+    static removeArrayTodo(id){
+        todoItems = todoItems.filter((item) => item.id !==+id)
     }
 }
 
