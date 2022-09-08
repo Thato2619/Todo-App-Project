@@ -1,9 +1,11 @@
+/*remove any pre-designed style*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*focus on the body and add gradient of purple and blue, with font raleway or Sans serif*/
 body{
     background-image: linear-gradient(120deg,  #87b8de , #9e7ce6  );
     color:white; 
@@ -11,11 +13,13 @@ body{
     min-height: 100vh;
 }
 
+/*make heading big and bolder*/
 header{
     font-size: 1.65rem;
     font-weight: bold;
 }
 
+/*this design will focus on the layout and space between header and form tags*/
 header,form{
     min-height: 20vh;
     display: flex;
