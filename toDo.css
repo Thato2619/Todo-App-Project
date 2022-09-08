@@ -55,3 +55,21 @@ form button:hover{
     align-items:center;
 }
 
+/*Style the todo list*/
+.todoList{
+    min-width: 30%;
+    list-style: none;
+}
+
+/*Style the todo list*/
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
