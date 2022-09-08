@@ -11,7 +11,7 @@ const input = document.querySelector("[data-input]");
 //}
 
 //empty array
-let todoItems = [];
+let todoItems = storage.getStorage();
 
 
 //add event-Listener in the form 
