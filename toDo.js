@@ -87,6 +87,7 @@ class display{
     //create object that removes array 
     static removeArrayTodo(id){
         todoItems = todoItems.filter((item) => item.id !==+id)
+        storage.addStorage(todoItems);
         
     }
 }
