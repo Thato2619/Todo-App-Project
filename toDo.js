@@ -3,34 +3,31 @@ const input = document.querySelector(".dataInput");
 const button = document.querySelector(".dataButton");
 const list = document.querySelector(".dataList");
 
-// add event listeners
-button.addEventListener('click' , addTodo);
+//Add event listners
+button.addEventListener("click" , addTodo);
 
-
-
-//function of addTodo
+//Functions
 function addTodo(event){
-    //prevents form from submiiting unwillingly
-    event.preventDefault();
-    //add todo(DIV)
-    const todoDiv = document.createElement("div");
-    todoDiv.classList.add("todo-item");
-    //create LI
-    const newTodo = document.createElement("li");
+    //prevent form form submitting unwillingly
+    event.preventDefault();  
+    // add Todo (DIV)
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add('todo');
+    //Create LI
+    const newTodo = document.createElement('li');
     newTodo.innerText = 'hey';
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
-    //add Complete button within the LI
-    const completeButton = document.createElement("button");
-    completeButton.innerHTML = '<i class="fas fa-check"></i>'; 
+    //add complete button within the LI
+    const completeButton = document.createElement('button');
+    completeButton.innerHTML = '<i class="fas fa-check"></i>'
     completeButton.classList.add("complete-btn");
     todoDiv.appendChild(completeButton);
-
     //add delete button within the LI
-    const deleteButton = document.createElement("button");
-    completeButton.innerHTML = '<i class="fas fa-trash"></i>'; 
+    const deleteButton = document.createElement('button');
+    completeButton.innerHTML = '<i class="fas fa-trash"></i>'
     completeButton.classList.add("complete-btn");
     todoDiv.appendChild(deleteButton);
-    //Append to list
-    todoList.appendChild(todoDiv);
+    //append to list
+    list.appendChild(todoDiv);
 }
