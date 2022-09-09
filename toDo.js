@@ -64,7 +64,7 @@ function deleteItems(e){
 //display all completed todo task 
 //display all the incomplete todo task
 function filterTodo(e) {
-    const todos = list.c;
+    const todos = list.chi
     todos.forEach(function(todo){
         switch (e.target.value){
             case "all":
@@ -87,7 +87,7 @@ function filterTodo(e) {
         }
     });
 }
-
+//this function stores and saves local storage 
 function saveLocalTodos(todo){
     //check if you have items of todo list
     let todos;
@@ -100,6 +100,7 @@ function saveLocalTodos(todo){
     localStorage.setItem("todos" , JSON.stringify(todos));
 }
 
+//this function helps get storage from task items
 function getTodos(){
     let todos;
     if(localStorage.getItem("todos") === null){
@@ -107,7 +108,6 @@ function getTodos(){
     }else{
         todos = JSON.parse(localStorage.getItem("todos"));
     }
-
     todos.forEach(function(todo){
      // add Todo (DIV)
     const todoDiv = document.createElement('div');
@@ -125,3 +125,4 @@ function getTodos(){
     todoDiv.appendChild(completeButton);
     })
 }
+
