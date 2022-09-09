@@ -2,10 +2,12 @@
 const input = document.querySelector(".todoInput");
 const button = document.querySelector(".todoButton");
 const list = document.querySelector(".todoList");
+const todoFilter = document.querySelector(".todoFilter");
 
 //Add event listners
 button.addEventListener("click" , addTodo);
 list.addEventListener("click", deleteItems);
+todoFilter.addEventListener("click", filterTodo);
 
 //Function on adding todo items
 function addTodo(event){
@@ -51,4 +53,10 @@ function deleteItems(e){
         const todo = item.parentElement;
         todo.classList.toggle("complete");
     }
+}
+
+//create a function that filters all the todo items 
+function filterTodo(e) {
+    const todo = todoList.childNodes
+    console.log()
 }
