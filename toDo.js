@@ -21,6 +21,9 @@ function addTodo(event){
     newTodo.innerText = input.value;
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
+
+    //add TODO to localstorage
+    saveLocalTodos(input.value);
     
     //add complete button within the LI
     const completeButton = document.createElement('button');
@@ -86,13 +89,13 @@ function filterTodo(e) {
 
 function saveLocalTodos(todo){
     //check if you have items of todo list
-    let todoStorage;
+    let todos;
     if(localStorage.getItem("todos") === null){
-        todoStorage = [];
+        todos = [];
     }else{
-        todoStorage = JSON.parse(localStorage.getItem('todos'));
+        todos = JSON.parse(localStorage.getItem("todos"));
     }
-    todoStorage.push(todo);
-    localStorage.setItem("todos" , JSON.stringify(todoStorage));
-
+    todos.push(todo);
+    localStorage.setItem("todos" , JSON.stringify(todos));
+ 
 }
