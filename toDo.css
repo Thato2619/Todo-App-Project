@@ -49,37 +49,3 @@ form button:hover{
 }
 
 /*Design list button and place them in the center*/
-.todoContainer{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-}
-
-/*Style the todo list*/
-.todoList{
-    min-width: 30%;
-    list-style: none;
-}
-
-/*Style the todo list*/
-.todo{
-    margin: 0.5rem;
-    background: white;
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-/*Style the todo list*/
-.todo li{
-    flex:1; 
-}
-/*Style delete button*/
-.trash.btn,.complete.btn{
-    background: #B597f6;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-}

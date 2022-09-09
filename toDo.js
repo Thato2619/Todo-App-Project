@@ -18,15 +18,17 @@ function addTodo(event){
     newTodo.innerText = 'hey';
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
+    
     //add complete button within the LI
     const completeButton = document.createElement('button');
-    completeButton.innerHTML = '<i class="fas fa-check"></i>'
+    completeButton.innerHTML =  '<i class="fa-sharp fa-solid fa-check"></i>';
     completeButton.classList.add("complete-btn");
     todoDiv.appendChild(completeButton);
+
     //add delete button within the LI
     const deleteButton = document.createElement('button');
-    completeButton.innerHTML = '<i class="fas fa-trash"></i>'
-    completeButton.classList.add("trash-btn");
+    deleteButton.innerHTML = '<i class="fa-sharp fa-solid fa-trash"></i>';
+    deleteButton.classList.add("delete-btn");
     todoDiv.appendChild(deleteButton);
     //append to list
     list.appendChild(todoDiv);
