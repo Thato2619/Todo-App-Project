@@ -45,4 +45,10 @@ function deleteItems(e){
         const todo = item.parentElement;
         todo.remove();
     }
+
+    //this is responsible for completed task done ~ focuses on the check button
+    if(item.classList[0] === "complete-btn"){
+        const todo = item.parentElement;
+        todo.classList.toggle("complete");
+    }
 }
