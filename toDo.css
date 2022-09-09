@@ -54,3 +54,9 @@ form button:hover{
     justify-content: center;
     align-items: center;
 }
+
+/*Design todo lists*/
+.todoList{
+    max-width: 30%;
+    list-style: none;
+}
