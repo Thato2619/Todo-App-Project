@@ -39,5 +39,10 @@ function addTodo(event){
 
 //Function on adding todo items
 function deleteItems(e){
-    
+    const item = e.target;
+    //delete todo
+    if(item.classList[0] === "delete-btn"){
+        const todo = item.parentElement;
+        todo.remove();
+    }
 }
