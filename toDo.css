@@ -139,3 +139,7 @@ select{
     padding:1rem;
     pointer-events: none;
 }
+.select:hover::after{
+    background: white;
+    color: #B597f6;
+}
