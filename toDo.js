@@ -55,8 +55,31 @@ function deleteItems(e){
     }
 }
 
-//create a function that filters all the todo items 
+//create a function that enables filters throughout todo app
+//display all items as the user clicks 
+//display all completed todo task 
+//display all the incomplete todo task
 function filterTodo(e) {
-    const todo = todoList.childNodes
-    console.log()
+    const todos = list.c;
+    todos.forEach(function(todo){
+        switch (e.target.value){
+            case "all":
+                    todo.style.display = "flex";
+                    break;
+            case "completed":
+                if (todo.classList.contains("completed")) {
+                    todo.style.display = "flex";
+                } else{
+                    todo.style.display = "none";
+                }
+                break;
+            case "incomplete":
+                if (!todo.classList.contains("complete")) {
+                    todo.style.display = "flex";
+                } else{
+                    todo.style.display = "none" 
+                }
+                break;
+        }
+    });
 }
