@@ -109,33 +109,33 @@ form button:hover{
 
 /*remove all select tag styles */
 select{
-    -moz-appearance:none;
-    appearance:none;
-    outline:none;
-    border:none;
+    -webkit-appearance: none ;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
 }
 
 /*start styling select from div tag */
 .select{
-    margin:1rem;
-    position:relative;
-    overflow:hidden
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
 }
-
 /*continue to style select tags */
 select{
-    color:#B597f6;
-    width:10rem;
-    cursor:pointer;
+    color: #B597f6;
+    width: 10rem;
+    cursor: pointer;
     padding:1rem;
 }
 
-select::after{
-    content:"\25BC"; /*add arrow when selection category of tasks completion or incompletion*/
+.select::after {
+    content: "\25BC"; /*add arrow when selection category of tasks completion or incompletion*/
     position:absolute;
     background:#B597f6;
     top:0;
     right:0;
     padding:1rem;
-    pointer-events:none;
+    pointer-events: none;
 }
