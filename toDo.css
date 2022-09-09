@@ -49,3 +49,8 @@ form button:hover{
 }
 
 /*Design list button and place them in the center*/
+.todoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
