@@ -83,3 +83,16 @@ function filterTodo(e) {
         }
     });
 }
+
+function saveLocalTodos(todo){
+    //check if you have items of todo list
+    let todoStorage;
+    if(localStorage.getItem("todos") === null){
+        todoStorage = [];
+    }else{
+        todoStorage = JSON.parse(localStorage.getItem('todos'));
+    }
+    todoStorage.push(todo);
+    localStorage.setItem("todos" , JSON.stringify(todoStorage));
+
+}
