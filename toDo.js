@@ -7,7 +7,7 @@ const list = document.querySelector(".todoList");
 button.addEventListener("click" , addTodo);
 list.addEventListener("click", deleteItems);
 
-//Functions
+//Function on adding todo items
 function addTodo(event){
     //prevent form form submitting unwillingly
     event.preventDefault();  
@@ -35,4 +35,9 @@ function addTodo(event){
     list.appendChild(todoDiv);
     //clear input value
     input.value = "";
+}
+
+//Function on adding todo items
+function deleteItems(e){
+    
 }
