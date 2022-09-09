@@ -1,145 +1,149 @@
 /*remove any pre-designed style*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*focus on the body and add gradient of purple and blue, with font raleway or Sans serif*/
-body{
-    background-image: linear-gradient(120deg,  #87b8de , #9e7ce6  );
-    color:white; 
-    font-family: "Raleway" , "Sans serif";
-    min-height: 100vh;
+body {
+  background-image: linear-gradient(120deg, #87b8de, #9e7ce6);
+  color: white;
+  font-family: "Raleway", "Sans serif";
+  min-height: 100vh;
 }
 
 /*make heading big and bolder*/
-header{
-    font-size: 1.65rem;
-    font-weight: bold;
+header {
+  font-size: 1.65rem;
+  font-weight: bold;
 }
 
 /*this design will focus on the layout and space between header and form tags*/
-header,form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*design the input of the user. */
-form input, form button{
-    padding: 0.5rem;
-    font-size: 1.7rem;
-    border: none;
-    background-color: white
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  border: none;
+  background-color: white;
 }
 
 /*Design the button */
-form button{
-    color: #B597f6;
-    background: white;
-    cursor:pointer;
-    transition: all 0.3s ease;
+form button {
+  color: #b597f6;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 /*Design the button by adding hover effect*/
-form button:hover{
-    background: #B597f6;
-    color: white;
+form button:hover {
+  background: #b597f6;
+  color: white;
 }
 
 /*Design list button and place them in the center*/
-.todoContainer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.todoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Style todo list*/
-.todoList{
-    min-width:30%;
-    list-style:none;
+.todoList {
+  min-width: 30%;
+  list-style: none;
 }
 
 /*Style todo List */
-.todo{
-    margin:0.5rem;
-    background:white;
-    color:black;
-    font-size:1.5rem;
-    display:flex;
-    justify-content:space-between;
-    align-items:center
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*Style todo List */
-.todo li{
-    flex:1;
+.todo li {
+  flex: 1;
 }
 
 /*Style delete and complete button */
-.delete-btn, .complete-btn{
-    background:#B597f6;
-    color:white;
-    border:none;
-    padding:1rem;
-    cursor:pointer;
-    font-size:1rem;
+.delete-btn,
+.complete-btn {
+  background: #b597f6;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 /*Style complete button */
-.complete-btn{
-    background:#88d18a
+.complete-btn {
+  background: #88d18a;
 }
 
 /*add padding on the margin of todo-item */
-.todo-item{
-    padding:0rem 0,5rem;
+.todo-item {
+  padding: 0rem 0, 5rem;
 }
 
 /*remove pointer events in complete and delete buttons */
-.fa-trash, .fa-check{
-    pointer-events:none;
+.fa-trash,
+.fa-check {
+  pointer-events: none;
 }
 
-.complete{
-    text-decoration:line-through;
-    opacity:0.5
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 /*remove all select tag styles */
-select{
-    -webkit-appearance: none ;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    border: none;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
 }
 
 /*start styling select from div tag */
-.select{
-    margin: 1rem;
-    position: relative;
-    overflow: hidden;
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 /*continue to style select tags */
-select{
-    color: #B597f6;
-    width: 10rem;
-    cursor: pointer;
-    padding:1rem;
+select {
+  color: #b597f6;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
 }
 
 .select::after {
-    content: "\25BC"; /*add arrow when selection category of tasks completion or incompletion*/
-    position:absolute;
-    background:#B597f6;
-    top:0;
-    right:0;
-    padding:1rem;
-    pointer-events: none;
+  content: "\25BC"; /*add arrow when selection category of tasks completion or incompletion*/
+  position: absolute;
+  background: #b597f6;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
 }
-.select:hover::after{
-    background: white;
-    color: #B597f6;
+.select:hover::after {
+  background: white;
+  color: #b597f6;
 }
