@@ -32,4 +32,6 @@ function addTodo(event){
     todoDiv.appendChild(deleteButton);
     //append to list
     list.appendChild(todoDiv);
+    //clear input value
+    input.value = "";
 }
