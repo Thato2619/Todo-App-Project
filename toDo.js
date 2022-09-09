@@ -5,6 +5,7 @@ const list = document.querySelector(".todoList");
 const todoFilter = document.querySelector(".todoFilter");
 
 //Add event listners
+document.addEventListener("DOMContentLoaded" , getTodos) ;
 button.addEventListener("click" , addTodo);
 list.addEventListener("click", deleteItems);
 todoFilter.addEventListener("click", filterTodo);
