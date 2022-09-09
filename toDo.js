@@ -5,6 +5,7 @@ const list = document.querySelector(".todoList");
 
 //Add event listners
 button.addEventListener("click" , addTodo);
+list.addEventListener("click", deleteItems);
 
 //Functions
 function addTodo(event){
