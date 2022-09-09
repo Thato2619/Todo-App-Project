@@ -50,23 +50,39 @@ form button:hover{
 
 /*Design list button and place them in the center*/
 .todoContainer{
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
 
-/*Design todo lists*/
+/*Style todo list*/
 .todoList{
-    max-width: 30%;
-    list-style: none;
+    min-width:30%;
+    list-style:none;
 }
 
-/*Design todo*/
+/*Style todo List */
 .todo{
-    margin: 0.5rem;
-    background: white;
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
+    margin:0.5rem;
+    background:white;
+    color:black;
+    font-size:1.5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+
+/*Style todo List */
+.todo li{
+    flex:1;
+}
+
+/*Style delete and complete button */
+.delete-btn, .complete-btn{
+    background:#B597f6;
+    color:white;
+    border:none;
+    padding:1rem;
+    cursor:pointer;
+    font-size:1rem;
 }
