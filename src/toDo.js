@@ -1,13 +1,13 @@
 //Get all elements from HTML file and add querySelector
 const todoInput = document.querySelector(".todoInput");
 const todoButton = document.querySelector(".todoButton");
-const list = document.querySelector(".todoList");
+const todoList = document.querySelector(".todoList");
 const todoFilter = document.querySelector(".todoFilter");
 
 //Add event listners
 document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
-list.addEventListener("click", deleteItems);
+todoList.addEventListener("click", deleteItems);
 todoFilter.addEventListener("click", filterTodo);
 
 //Function on adding todo items
@@ -38,7 +38,7 @@ function addTodo(event) {
   deleteButton.classList.add("delete-btn");
   todoDiv.appendChild(deleteButton);
   //append to list
-  list.appendChild(todoDiv);
+  todoList.appendChild(todoDiv);
   //clear input value
   todoInput.value = "";
 }
@@ -64,7 +64,7 @@ function deleteItems(e) {
 //display all completed todo task
 //display all the incomplete todo task
 function filterTodo(e) {
-  const todos = list.chi;
+  const todos = todoList.chi;
   todos.forEach(function (todo) {
     switch (e.target.value) {
       case "all":
