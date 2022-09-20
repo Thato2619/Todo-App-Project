@@ -1,5 +1,5 @@
 //Get all elements from HTML file and add querySelector
-const input = document.querySelector(".todoInput");
+const todoInput = document.querySelector(".todoInput");
 const button = document.querySelector(".todoButton");
 const list = document.querySelector(".todoList");
 const todoFilter = document.querySelector(".todoFilter");
@@ -19,12 +19,12 @@ function addTodo(event) {
   todoDiv.classList.add("todo");
   //Create LI
   const newTodo = document.createElement("li");
-  newTodo.innerText = input.value;
+  newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
   //add TODO to localstorage
-  saveLocalTodos(input.value);
+  saveLocalTodos(todoInput.value);
 
   //add complete button within the LI
   const completeButton = document.createElement("button");
@@ -40,7 +40,7 @@ function addTodo(event) {
   //append to list
   list.appendChild(todoDiv);
   //clear input value
-  input.value = "";
+  todoInput.value = "";
 }
 
 //Function on adding todo items
