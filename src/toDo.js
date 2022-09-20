@@ -1,12 +1,12 @@
 //Get all elements from HTML file and add querySelector
 const todoInput = document.querySelector(".todoInput");
-const button = document.querySelector(".todoButton");
+const todoButton = document.querySelector(".todoButton");
 const list = document.querySelector(".todoList");
 const todoFilter = document.querySelector(".todoFilter");
 
 //Add event listners
 document.addEventListener("DOMContentLoaded", getTodos);
-button.addEventListener("click", addTodo);
+todoButton.addEventListener("click", addTodo);
 list.addEventListener("click", deleteItems);
 todoFilter.addEventListener("click", filterTodo);
 
